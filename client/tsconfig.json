@@ -19,6 +19,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "../client13/app/page.tsx", "../client13/app/page.tsx", "../client13/components/Container.tsx", "../client13/components/Container.tsx", "../client13/components/Footer.tsx", "../client13/components/MobileMenu.tsx", "../client13/components/ProjectCard.tsx", "../client13/components/SocialBar.tsx"],
   "exclude": ["node_modules"]
 }

@@ -1,15 +1,14 @@
+'use client';
 import Head from "next/head";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import NextLink from "next/link";
-import cn from "classnames";
+import Footer from "./Footer";
 
 const myLoader = ({ src }: { src: string }) => {
   return `${src}`;
 };
-
-import Footer from "components/Footer";
 interface NavItemType {
   href: string;
   text: string;
@@ -21,22 +20,21 @@ function NavItem({ href, text }: NavItemType) {
   return (
     <NextLink
       href={href}
-      className={cn(
+      className={
         isActive
           ? "font-semibold text-gray-800 dark:text-gray-200"
-          : "font-normal text-gray-600 dark:text-gray-400",
-        "hidden md:inline-block p-1 sm:px-3 sm:py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-all"
-      )}
+          : "hidden md:inline-block p-1 sm:px-3 sm:py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-all"
+      }
     >
       <span className="capsize">{text}</span>
     </NextLink>
   );
 }
 interface Props {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
-export default function Container(props:Props) {
+export default function Container(props: Props) {
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme, setTheme } = useTheme();
 
