@@ -4,7 +4,7 @@ import Link from "next/link";
 import ProjectCard from "@/components/ProjectCard";
 import SocialBar from "@/components/SocialBar";
 
-const myLoader = ({ src }) => {
+const myLoader = ({ src }: {src:string}) => {
   return `${src}`;
 };
 

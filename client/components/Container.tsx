@@ -10,8 +10,11 @@ const myLoader = ({ src }) => {
 };
 
 import Footer from "components/Footer";
-
-function NavItem({ href, text }) {
+interface NavItemType{
+  href: string;
+  text: string;
+}
+function NavItem({ href, text }: NavItemType) {
   const router = useRouter();
   const isActive = router.asPath === href;
 

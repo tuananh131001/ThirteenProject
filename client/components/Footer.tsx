@@ -1,7 +1,11 @@
-import Link from 'next/link';
+import Link from "next/link";
+import { JsxElement } from "typescript";
 
-
-const ExternalLink = ({ href, children }) => (
+type Props = {
+  href: string;
+  children: React.ReactNode;
+};
+const ExternalLink: React.FC<Props> = ({ href, children }) => (
   <a
     className="text-gray-500 hover:text-gray-600 transition"
     target="_blank"

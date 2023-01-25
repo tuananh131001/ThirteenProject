@@ -2,9 +2,18 @@ import Link from "next/link";
 import cn from "classnames";
 import Image from "next/image";
 
-const myLoader = ({ src }) => {
+const myLoader = ({ src }: { src: string }) => {
   return `${src}`;
 };
+
+interface ProjectCardInfo {
+  teamSize: string;
+  role: string;
+  title: string;
+  thumbnail: string;
+  slug: string;
+  gradient: string;
+}
 
 export default function ProjectCard({
   teamSize,
@@ -13,7 +22,7 @@ export default function ProjectCard({
   thumbnail,
   slug,
   gradient,
-}) {
+}: ProjectCardInfo) {
   return (
     <Link
       href={`/blog/${slug}`}
