@@ -1,8 +1,6 @@
-
 import Link from "next/link";
 import Image from "next/image";
-
-
+import cn from "classnames";
 
 interface ProjectCardInfo {
   teamSize: string;
@@ -22,10 +20,14 @@ export default function ProjectCard({
   gradient,
 }: ProjectCardInfo) {
   return (
-    // <Link
-     
-    //   className="transform hover:scale-[1.01] transition-all rounded-xl w-full bg-gradient-to-r p-1"
-    // >
+    <Link
+      href={`/blog/${slug}`}
+      className={cn(
+        "transform hover:scale-[1.01] transition-all",
+        "rounded-xl w-full bg-gradient-to-r p-1",
+        gradient
+      )}
+    >
       <div className=" flex flex-col justify-between h-full bg-white dark:bg-gray-900 rounded-lg p-4">
         <div className="flex flex-col md:flex-row justify-between">
           <div className="flex flex-col gap-2">
@@ -50,6 +52,6 @@ export default function ProjectCard({
           </div>
         </div>
       </div>
-    // </Link>
+    </Link>
   );
 }
