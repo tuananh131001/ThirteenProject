@@ -1,6 +1,6 @@
 'use client';
 import Head from "next/head";
-import { useRouter } from "next/navigation";
+import { useRouter,usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import NextLink from "next/link";
@@ -15,7 +15,8 @@ interface NavItemType {
 }
 function NavItem({ href, text }: NavItemType) {
   const router = useRouter();
-  const isActive = router.asPath === href;
+  const pathname = usePathname();
+  const isActive = pathname === href;
 
   return (
     <NextLink
