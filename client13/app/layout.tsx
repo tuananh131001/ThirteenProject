@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-head-element */
-import './global.css';
+import "./global.css";
 import Container from "@/components/Container";
+import { Providers } from "./providers";
 
 export default function RootLayout({
   children,
@@ -12,7 +13,10 @@ export default function RootLayout({
       <head></head>
 
       <body>
-        <Container>{children} </Container>
+        <Providers>
+          {" "}
+          <Container>{children} </Container>
+        </Providers>
       </body>
     </html>
   );
