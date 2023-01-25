@@ -32,8 +32,11 @@ function NavItem({ href, text }: NavItemType) {
     </NextLink>
   );
 }
+interface Props {
+  children: React.ReactNode
+}
 
-export default function Container(props) {
+export default function Container(props:Props) {
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme, setTheme } = useTheme();
 
