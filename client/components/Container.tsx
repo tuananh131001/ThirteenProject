@@ -5,12 +5,12 @@ import { useTheme } from "next-themes";
 import NextLink from "next/link";
 import cn from "classnames";
 
-const myLoader = ({ src }) => {
+const myLoader = ({ src }: { src: string }) => {
   return `${src}`;
 };
 
 import Footer from "components/Footer";
-interface NavItemType{
+interface NavItemType {
   href: string;
   text: string;
 }
