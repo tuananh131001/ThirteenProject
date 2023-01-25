@@ -50,6 +50,7 @@ export default function Home() {
           <ProjectCard
             thumbnail="https://user-images.githubusercontent.com/67695658/214550280-6c2b6c64-67ba-4898-a060-a0b9372adc45.png"
             role="Team leader"
+            url="https://github.com/tuananh131001/Cardinalis-BE"
             teamSize="4 people"
             title="Cardinalis - Microservices Social Platform "
             slug="style-guides-component-libraries-design-systems"
@@ -58,6 +59,7 @@ export default function Home() {
           <ProjectCard
             thumbnail="https://user-images.githubusercontent.com/67695658/180659614-01378f12-ff70-41a0-8c8e-440cb42869fc.png"
             role="Personal"
+            url="https://github.com/tuananh131001/UNS"
             teamSize="Individual"
             title="UNS - Image Sharing Website "
             slug="style-guides-component-libraries-design-systems"
@@ -65,9 +67,10 @@ export default function Home() {
           />
           <ProjectCard
             thumbnail="https://user-images.githubusercontent.com/67695658/169047047-67115a3d-5f6f-46e3-887d-54a0378c5cce.png"
-            role="Personal"
-            teamSize="Individual"
-            title="UNS - Image Sharing Website "
+            role="Team Leader"
+            url="https://github.com/tuananh131001/EEET2580-Front-End-Dramaholic"
+            teamSize="5 people"
+            title="Dramaholic - Movie Streaming Website "
             slug="style-guides-component-libraries-design-systems"
             gradient="from-[#FDE68A] via-[#FCA5A5] to-[#FECACA]"
           />

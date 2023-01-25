@@ -9,19 +9,21 @@ interface ProjectCardInfo {
   thumbnail: string;
   slug: string;
   gradient: string;
+  url: string;
 }
 
 export default function ProjectCard({
   teamSize,
   role,
   title,
+  url,
   thumbnail,
   slug,
   gradient,
 }: ProjectCardInfo) {
   return (
     <Link
-      href={`/blog/${slug}`}
+      href={`${url}`}
       className={cn(
         "transform hover:scale-[1.01] transition-all",
         "rounded-xl w-full bg-gradient-to-r p-1",
