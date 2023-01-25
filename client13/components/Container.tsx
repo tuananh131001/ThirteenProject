@@ -1,20 +1,16 @@
 'use client';
 import Head from "next/head";
-import { useRouter,usePathname } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import NextLink from "next/link";
 import Footer from "./Footer";
 
-const myLoader = ({ src }: { src: string }) => {
-  return `${src}`;
-};
 interface NavItemType {
   href: string;
   text: string;
 }
 function NavItem({ href, text }: NavItemType) {
-  const router = useRouter();
   const pathname = usePathname();
   const isActive = pathname === href;
 
@@ -43,7 +39,7 @@ export default function Container(props: Props) {
   useEffect(() => setMounted(true), []);
 
   const { children, ...customMeta } = props;
-  const router = useRouter();
+  const pathname = usePathname();
   const meta = {
     title: "Tuan Anh Nguyen – Software Engineering.",
     description: `Full-stack engineer, Tech enthusiast.`,
@@ -59,8 +55,8 @@ export default function Container(props: Props) {
         <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />
         <meta content={meta.description} name="description" />
-        <meta property="og:url" content={`https://leerob.io${router.asPath}`} />
-        <link rel="canonical" href={`https://leerob.io${router.asPath}`} />
+        <meta property="og:url" content={`https://leerob.io${pathname}`} />
+        <link rel="canonical" href={`https://leerob.io${pathname}`} />
         <meta property="og:type" content={meta.type} />
         <meta property="og:site_name" content="Lee Robinson" />
         <meta property="og:description" content={meta.description} />
