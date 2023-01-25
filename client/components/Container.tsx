@@ -50,6 +50,7 @@ export default function Container(props:Props) {
     description: `Full-stack engineer, Tech enthusiast.`,
     image: "https://leerob.io/static/images/lee-banner.png",
     type: "website",
+    date: "22.11.2023",
     ...customMeta,
   };
 
