@@ -1,11 +1,15 @@
-import Head from 'next/head';
-import { useRouter } from 'next/router';
-import { useState, useEffect } from 'react';
-import { useTheme } from 'next-themes';
-import NextLink from 'next/link';
-import cn from 'classnames';
+import Head from "next/head";
+import { useRouter } from "next/router";
+import { useState, useEffect } from "react";
+import { useTheme } from "next-themes";
+import NextLink from "next/link";
+import cn from "classnames";
 
-import Footer from 'components/Footer';
+const myLoader = ({ src }) => {
+  return `${src}`;
+};
+
+import Footer from "components/Footer";
 
 function NavItem({ href, text }) {
   const router = useRouter();
@@ -16,9 +20,9 @@ function NavItem({ href, text }) {
       href={href}
       className={cn(
         isActive
-          ? 'font-semibold text-gray-800 dark:text-gray-200'
-          : 'font-normal text-gray-600 dark:text-gray-400',
-        'hidden md:inline-block p-1 sm:px-3 sm:py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-all'
+          ? "font-semibold text-gray-800 dark:text-gray-200"
+          : "font-normal text-gray-600 dark:text-gray-400",
+        "hidden md:inline-block p-1 sm:px-3 sm:py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-all"
       )}
     >
       <span className="capsize">{text}</span>
@@ -36,11 +40,11 @@ export default function Container(props) {
   const { children, ...customMeta } = props;
   const router = useRouter();
   const meta = {
-    title: 'Tuan Anh Nguyen – Software Engineering.',
+    title: "Tuan Anh Nguyen – Software Engineering.",
     description: `Full-stack engineer, Tech enthusiast.`,
-    image: 'https://leerob.io/static/images/lee-banner.png',
-    type: 'website',
-    ...customMeta
+    image: "https://leerob.io/static/images/lee-banner.png",
+    type: "website",
+    ...customMeta,
   };
 
   return (
@@ -82,9 +86,9 @@ export default function Container(props) {
             aria-label="Toggle Dark Mode"
             type="button"
             className="w-9 h-9 bg-gray-200 rounded-lg dark:bg-gray-600 flex items-center justify-center  hover:ring-2 ring-gray-300  transition-all"
-            onClick={() =>
-              setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')
-            }
+            onClick={() => {
+              setTheme(resolvedTheme === "dark" ? "light" : "dark");
+            }}
           >
             {mounted && (
               <svg
@@ -94,7 +98,7 @@ export default function Container(props) {
                 stroke="currentColor"
                 className="w-5 h-5 text-gray-800 dark:text-gray-200"
               >
-                {resolvedTheme === 'dark' ? (
+                {resolvedTheme === "dark" ? (
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
