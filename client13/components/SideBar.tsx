@@ -20,18 +20,6 @@ const navItems: any = {
     y: 35,
     w: "65px",
   },
-  "/blog": {
-    name: "blog",
-    x: 127,
-    y: 69,
-    w: "56px",
-  },
-  "/guestbook": {
-    name: "guestbook",
-    x: 182,
-    y: 104,
-    w: "100px",
-  },
 };
 
 function LetterA() {
@@ -47,12 +35,6 @@ function LetterA() {
     </motion.div>
   );
 }
-const letterStyle = {
-  fontSize: "75px",
-  fontWeight: "bold",
-  color: "#FFFFFF",
-  textShadow: "2px 2px #000",
-};
 function Logo() {
   return (
     <Link aria-label="Nguyen Tuan Anh" href="/">
@@ -170,7 +152,7 @@ export default function SideBar() {
                   key={path}
                   href={path}
                   className={clsx(
-                    "transition-all hover:text-neutral-800 dark:hover:text-neutral-200 py-[5px] px-[10px]",
+                    "transition-all hover:text-neutral-800 dark:hover:text-neutral-200 py-[5px] px-[10px] hover:cursor-pointer",
                     {
                       "text-neutral-500": !isActive,
                       "font-bold": isActive,

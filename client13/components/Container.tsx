@@ -1,10 +1,8 @@
 'use client';
-import Head from "next/head";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import NextLink from "next/link";
-import Footer from "./Footer";
 
 interface NavItemType {
   href: string;

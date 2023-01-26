@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import Link from "next/link";
 import { JsxElement } from "typescript";
 
@@ -30,45 +30,41 @@ export default function Footer() {
             Home
           </Link>
           <Link
-            href="/about"
+            href="/repos"
             className="text-gray-500 hover:text-gray-600 transition"
           >
-            About
+            Repos
           </Link>
-          <ExternalLink href="https://leerob.substack.com">
-            Newsletter
-          </ExternalLink>
         </div>
         <div className="flex flex-col space-y-4">
-          <ExternalLink href="https://twitter.com/leeerob">
-            Twitter
+          <ExternalLink href="https://github.com/tuananh131001">
+            GitHub
           </ExternalLink>
-          <ExternalLink href="https://github.com/leerob">GitHub</ExternalLink>
-          <ExternalLink href="https://www.youtube.com/@leerob">
-            YouTube
+          <ExternalLink href="https://www.linkedin.com/in/tuananh131001/">
+            Linkedin
           </ExternalLink>
         </div>
         <div className="flex flex-col space-y-4">
           <Link
-            href="/uses"
+            href=""
             className="text-gray-500 hover:text-gray-600 transition"
           >
             Uses
           </Link>
           <Link
-            href="/guestbook"
+            href=""
             className="text-gray-500 hover:text-gray-600 transition"
           >
             Guestbook
           </Link>
           <Link
-            href="/snippets"
+            href=""
             className="text-gray-500 hover:text-gray-600 transition"
           >
             Snippets
           </Link>
           <Link
-            href="/tweets"
+            href=""
             className="text-gray-500 hover:text-gray-600 transition"
           >
             Tweets
