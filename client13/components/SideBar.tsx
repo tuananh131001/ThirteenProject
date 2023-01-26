@@ -181,7 +181,7 @@ export default function SideBar() {
                 </Link>
               );
             })}
-            <div className="pl-2">
+            <div className="pl-2 pt-2">
               {" "}
               <ToggleThemeButton />
             </div>
