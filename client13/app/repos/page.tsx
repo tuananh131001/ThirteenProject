@@ -10,14 +10,13 @@ interface RepoProp {
   language: string;
   html_url: string;
 }
-const GITHUB_TOKEN = "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";
 
 async function getRepos() {
   const res = await fetch(
     "https://api.github.com/users/tuananh131001/repos?per_page=10&?sort=created&direction=desc",
     {
       headers: {
-        Authorization: `Token ${GITHUB_TOKEN}`,
+        Authorization: `Token ${process.env.GITHUB_TOKEN}`,
       },
     }
   );
