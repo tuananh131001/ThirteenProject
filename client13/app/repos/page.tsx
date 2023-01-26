@@ -1,5 +1,7 @@
 import Link from "next/link";
+
 import React from "react";
+import backup from "./backup";
 interface RepoProp {
   id: string;
   name: string;
@@ -19,6 +21,10 @@ async function getRepos() {
       },
     }
   );
+  if (!res.ok) {
+    return backup;
+  }
+
   const data = await res.json();
   return data as [RepoProp];
 }
@@ -39,20 +45,28 @@ async function page() {
   );
 }
 function Repo({ repo }: { repo: RepoProp }) {
-  const { name, description, created_at ,language,html_url } = repo || {};
+  const { name, description, created_at, language, html_url } = repo || {};
   return (
     <>
       <section className="flex gap-10 items-center justify-between ">
         <div className="left-col pb-4 pt-4 w-8/12">
           {" "}
-          <h4 className=" font-bold text-orange-800 text-lg dark:text-blue-400">{name}</h4>
+          <h4 className=" font-bold text-orange-800 text-lg dark:text-blue-400">
+            {name}
+          </h4>
           <p className=" text-sm ">{description}</p>
           <div className="flex gap-4 items-center ">
             <h3 className="lang text-sm ">{language}</h3>
             <h3 className="create-at text-xs ">{created_at}</h3>
           </div>
         </div>
-        <Link className=" text-xs w-16 h-12 bg-gray-200 rounded-lg dark:bg-gray-600 flex items-center justify-center  hover:ring-2 ring-gray-300  transition-all" href={html_url}> View </Link>
+        <Link
+          className=" text-xs w-16 h-12 bg-gray-200 rounded-lg dark:bg-gray-600 flex items-center justify-center  hover:ring-2 ring-gray-300  transition-all"
+          href={html_url}
+        >
+          {" "}
+          View{" "}
+        </Link>
       </section>
     </>
   );
