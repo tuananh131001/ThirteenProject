@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import { JsxElement } from "typescript";
 
 type Props = {
   href: string;

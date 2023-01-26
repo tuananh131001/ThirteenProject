@@ -3,10 +3,6 @@ import React from "react";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 
 function SocialBar() {
-  const meta = {
-    githubLink: "Tuan Anh Nguyen – Software Engineering.",
-    linkedinLink: `Full-stack engineer, Tech enthusiast.`,
-  };
   return (
     <div className="flex  ">
       <Link className="hover:opacity-80" href="https://github.com/tuananh131001">

@@ -18,7 +18,6 @@ export default function ProjectCard({
   title,
   url,
   thumbnail,
-  slug,
   gradient,
 }: ProjectCardInfo) {
   return (
