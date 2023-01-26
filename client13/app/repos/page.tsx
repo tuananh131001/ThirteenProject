@@ -1,7 +1,6 @@
 import Link from "next/link";
 
 import React from "react";
-import backup from "./backup";
 interface RepoProp {
   id: string;
   name: string;
@@ -21,9 +20,6 @@ async function getRepos() {
       },
     }
   );
-  if (!res.ok) {
-    return backup;
-  }
 
   const data = await res.json();
   return data as [RepoProp];
