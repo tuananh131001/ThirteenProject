@@ -5,7 +5,6 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-
 const navItems: any = {
   "/": {
     name: "home",
@@ -136,7 +135,7 @@ export default function SideBar() {
               </>
             ) : null}
 
-            {Object.entries(navItems).map(([path, { name }]) => {
+            {Object.entries(navItems).map(([path, { name }]: any) => {
               const isActive = path === pathname;
 
               return (
