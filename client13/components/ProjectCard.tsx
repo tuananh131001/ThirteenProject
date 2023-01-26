@@ -30,8 +30,8 @@ export default function ProjectCard({
       )}
     >
       <div className=" flex flex-col justify-between h-full bg-white dark:bg-gray-900 rounded-lg p-4">
-        <div className="flex flex-col md:flex-row justify-between">
-          <div className="flex flex-col gap-2">
+        <div className="flex flex-col md:flex-row justify-between h-full">
+          <div className="flex flex-col gap-2 h-auto justify-between">
             <div className="items-center">
               {" "}
               <Image
@@ -43,13 +43,15 @@ export default function ProjectCard({
                 src={thumbnail}
               ></Image>
             </div>
-
-            <h4 className="text-lg md:text-lg font-medium w-full text-gray-900 dark:text-gray-100 tracking-tight">
-              {title}
-            </h4>
-            <h4 className="text-md md:text-lg font-medium w-full text-gray-900 dark:text-gray-100 tracking-tight">
-              {role} - {teamSize}
-            </h4>
+            <div className="">
+              {" "}
+              <h4 className="text-lg md:text-lg font-medium w-full text-gray-900 dark:text-gray-100 tracking-tight">
+                {title}
+              </h4>
+              <h4 className="text-md md:text-lg font-medium w-full text-gray-900 dark:text-gray-100 tracking-tight">
+                {role} - {teamSize}
+              </h4>
+            </div>
           </div>
         </div>
       </div>
