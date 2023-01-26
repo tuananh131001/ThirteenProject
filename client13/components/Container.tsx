@@ -79,7 +79,7 @@ export default function Container(props: Props) {
           <div className="ml-[-0.60rem]">
             {/* <MobileMenu /> */}
             <NavItem href="/" text="Home" />
-            <NavItem href="/guestbook" text="Guestbook" />
+            <NavItem href="/repos" text="Repos" />
             <NavItem href="/dashboard" text="Dashboard" />
             <NavItem href="/blog" text="Blog" />
             <NavItem href="/snippets" text="Snippets" />

@@ -81,11 +81,11 @@ export default function Home() {
             /> */}
         </div>
         <Link
-          href="/blog"
+          href="/repos"
           className="flex items-center mt-8 text-gray-600 dark:text-gray-400 leading-7 rounded-lg hover:text-gray-800 dark:hover:text-gray-200 transition-all h-6"
         >
           <>
-            {"Read all posts"}
+            {"View all repos"}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
