@@ -10,7 +10,6 @@ interface RepoProp {
   language: string;
   html_url: string;
 }
-
 async function getRepos() {
   const res = await fetch(
     "https://api.github.com/users/tuananh131001/repos?per_page=10&?sort=created&direction=desc",
@@ -22,19 +21,25 @@ async function getRepos() {
   );
 
   const data = await res.json();
+  if (data === null) return [];
   return data as [RepoProp];
 }
 
 async function page() {
-  const repos: [RepoProp] = await getRepos();
+  const repos = await getRepos();
+  if (!repos) return;
   return (
     <div className="flex flex-col justify-center items-start max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
       <div className="flex flex-col-reverse sm:flex-row items-start ">
         <div className="flex flex-col justify-start w-full divide-y divide-slate-400/25 gap-2 ">
           {" "}
-          {repos?.map((repo: RepoProp) => {
-            return <Repo key={repo.id} repo={repo}></Repo>;
-          })}{" "}
+          {repos ? (
+            repos?.map((repo: RepoProp) => {
+              return <Repo key={repo.id} repo={repo}></Repo>;
+            })
+          ) : (
+            <></>
+          )}{" "}
         </div>
       </div>
     </div>
