@@ -44,10 +44,10 @@ function Repo({ repo }: { repo: RepoProp }) {
   return (
     <>
       <section className="flex gap-10 items-center justify-between ">
-        <div className="left-col pb-4 pt-4 ">
+        <div className="left-col pb-4 pt-4 w-8/12">
           {" "}
           <h4 className=" font-bold text-orange-800 text-lg dark:text-blue-400">{name}</h4>
-          <p className=" text-sm">{description}</p>
+          <p className=" text-sm ">{description}</p>
           <div className="flex gap-4 items-center ">
             <h3 className="lang text-sm ">{language}</h3>
             <h3 className="create-at text-xs ">{created_at}</h3>
