@@ -125,7 +125,7 @@ function TechnologySection() {
       <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-6 text-black dark:text-white">
         Technologies :
       </h3>
-      <p className="grid grid-cols-10 gap-4 text-5xl">
+      <p className="grid grid-cols-5 gap-4 text-5xl md:grid-cols-10">
         <SiPython></SiPython>
         <SiSpringboot></SiSpringboot>
         <SiReact></SiReact>
