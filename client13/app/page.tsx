@@ -64,13 +64,22 @@ function ProjectsSection() {
       <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-6 text-black dark:text-white">
         Projects
       </h3>
-      <div className="flex gap-6 flex-col md:grid md:grid-flow-col md:grid-rows-2 md:gap-4 ">
+      <div className="columns-1 gap-4 sm:columns-2  sm:grid-cols-2 sm:gap-4 sm:p-0  p-4 ">
         <ProjectCard
           thumbnail="https://user-images.githubusercontent.com/67695658/214550280-6c2b6c64-67ba-4898-a060-a0b9372adc45.png"
           role="Team leader"
           url="https://github.com/tuananh131001/Cardinalis-BE"
           teamSize="4 people"
           title="Cardinalis - Microservices Social Platform "
+          slug="style-guides-component-libraries-design-systems"
+          gradient="from-[#D8B4FE] to-[#818CF8]"
+        />
+        <ProjectCard
+          thumbnail="https://user-images.githubusercontent.com/67695658/178662828-ff1d16e7-3934-45ad-81f7-7da284e58716.png"
+          role="Team leader"
+          url="https://github.com/tuananh131001/INTE2512_final"
+          teamSize="5 people"
+          title="Open News - News Reader JavaFX"
           slug="style-guides-component-libraries-design-systems"
           gradient="from-[#D8B4FE] to-[#818CF8]"
         />
@@ -91,6 +100,15 @@ function ProjectsSection() {
           title="Dramaholic - Movie Streaming Website "
           slug="style-guides-component-libraries-design-systems"
           gradient="from-[#FDE68A] via-[#FCA5A5] to-[#FECACA]"
+        />
+        <ProjectCard
+          thumbnail="https://camo.githubusercontent.com/6aec86431ea3b948f01079af170c7f34a6269e184717c64e006b0904aebb78bd/68747470733a2f2f692e696d6775722e636f6d2f4a32356c6c39412e706e67"
+          role="Team Leader"
+          url="https://github.com/tuananh131001/Ambrosia"
+          teamSize="4 people"
+          title="Ambrosia - Food application "
+          slug="style-guides-component-libraries-design-systems"
+          gradient="from-[#af9b4a] via-[#2e378b] to-[#FECACA]"
         />
       </div>
       <Link

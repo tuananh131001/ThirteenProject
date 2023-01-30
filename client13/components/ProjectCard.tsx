@@ -25,21 +25,21 @@ export default function ProjectCard({
       href={`${url}`}
       className={cn(
         "transform hover:scale-[1.01] transition-all",
-        "rounded-xl w-full bg-gradient-to-r p-1",
+        "flex gap-4 mb-8 md:my-12  rounded-xl w-full bg-gradient-to-r p-1",
         gradient
       )}
     >
-      <div className=" flex flex-col justify-between h-full bg-white dark:bg-gray-900 rounded-lg p-4">
-        <div className="flex flex-col md:flex-row justify-between h-full">
-          <div className="flex flex-col gap-2 h-auto justify-between">
-            <div className="items-center">
+      <div className="w-full flex flex-col justify-between h-full bg-white dark:bg-gray-900 rounded-lg p-4">
+        <div className="w-full flex flex-col md:flex-row justify-between h-full">
+          <div className="w-full flex flex-col gap-2 h-auto justify-between">
+            <div className="w-full items-center">
               {" "}
               <Image
                 sizes="100vw"
                 width="0"
                 height="0"
                 alt="Project"
-                className="w-full h-auto "
+                className="w-full h-full "
                 src={thumbnail}
               ></Image>
             </div>

@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["media.licdn.com", "user-images.githubusercontent.com"],
+    domains: ["media.licdn.com", "user-images.githubusercontent.com","camo.githubusercontent.com"],
   },
   reactStrictMode: true,
   swcMinify: true,
