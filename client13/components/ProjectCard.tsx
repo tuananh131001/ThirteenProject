@@ -48,7 +48,7 @@ export default function ProjectCard({
               <h4 className="text-lg md:text-lg font-medium w-full text-gray-900 dark:text-gray-100 tracking-tight">
                 {title}
               </h4>
-              <h4 className="text-md md:text-lg font-medium w-full text-yellow-300 dark:text-red-900 tracking-tight">
+              <h4 className="text-md md:text-lg font-medium w-full text-red-500 dark:text-yellow-300 tracking-tight">
                 {role} - {teamSize}
               </h4>
             </div>
