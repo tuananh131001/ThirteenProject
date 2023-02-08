@@ -20,6 +20,12 @@ const navItems: any = {
     y: 35,
     w: "65px",
   },
+  "/blogs": {
+    name: "blogs",
+    x: 64,
+    y: 35,
+    w: "65px",
+  }
 };
 
 function LetterA() {
