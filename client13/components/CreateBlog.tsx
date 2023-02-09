@@ -51,7 +51,7 @@ function CreateBlog() {
         value={tags}
         onChange={(e) => setTags(e.target.value)}
       ></input>
-      <MDEditor value={content} onChange={setContent} />
+      <MDEditor value={content} onChange={(val) => setContent(val || "")} />
       <button onClick={create}>Submit</button>
     </div>
   );
