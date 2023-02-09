@@ -1,3 +1,4 @@
+import CreateBlog from "@/components/CreateBlog";
 import getPostMetadata from "@/components/getPostMetadata";
 import Link from "next/link";
 
@@ -15,6 +16,7 @@ async function page() {
       ) : (
         <></>
       )}
+      <CreateBlog/>
     </div>
   );
 }
