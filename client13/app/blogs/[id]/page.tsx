@@ -1,5 +1,6 @@
 const BACKEND_URL = process.env.BACKEND_URL || "http://localhost:3000";
 
+import getPostMetadata from "@/components/getPostMetadata";
 import matter from "gray-matter";
 import Markdown from "markdown-to-jsx";
 async function getBlog(id: string) {
@@ -13,6 +14,12 @@ async function getBlog(id: string) {
   const matterResult = matter(data.content);
   return matterResult;
 }
+export const generateStaticParams = async () => {
+  const posts = await getPostMetadata();
+  return posts.map((post) => ({
+    id: post.id,
+  }));
+};
 
 export default async function BlogPage({ params }: any) {
   const blog = await getBlog(params.id);
