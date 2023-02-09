@@ -22,8 +22,8 @@ const navItems: any = {
   },
   "/blogs": {
     name: "blogs",
-    x: 64,
-    y: 35,
+    x: 130,
+    y: 70,
     w: "65px",
   }
 };
