@@ -10,6 +10,10 @@ const BACKEND_URL =
   process.env.BACKEND_URL || "https://round-refrigerator.pockethost.io";
 function CreateBlog() {
   const [content, setContent] = useState("**Hello world!!!**");
+  const [title, setTitle] = useState("");
+  const [thumbnail, setThumbnail] = useState("");
+  const [tags, setTags] = useState("");
+
   const router = useRouter();
 
   const create = async () => {
@@ -20,6 +24,9 @@ function CreateBlog() {
       },
       body: JSON.stringify({
         content,
+        thumbnail,
+        tags,
+        title,
       }),
     });
 
@@ -27,6 +34,23 @@ function CreateBlog() {
   };
   return (
     <div>
+      <input
+        placeholder="Title"
+        value={title}
+        onChange={(e) => setTitle(e.target.value)}
+      ></input>
+      <br />
+      <input
+        placeholder="Thumbnail"
+        value={thumbnail}
+        onChange={(e) => setThumbnail(e.target.value)}
+      ></input>
+      <br />
+      <input
+        placeholder="Tags"
+        value={tags}
+        onChange={(e) => setTags(e.target.value)}
+      ></input>
       <MDEditor value={content} onChange={setContent} />
       <button onClick={create}>Submit</button>
     </div>
