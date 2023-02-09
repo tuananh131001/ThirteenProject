@@ -1,15 +1,11 @@
+import getPostMetadata from "@/components/getPostMetadata";
 import Link from "next/link";
 
 const BACKEND_URL = process.env.BACKEND_URL;
 
-async function getBlogs() {
-  const res = await fetch(BACKEND_URL + "/api/collections/blogs/records");
-  const data = await res.json();
-  return data?.items as any[];
-}
 
 async function page() {
-  const blogs = await getBlogs();
+  const blogs = await getPostMetadata();
   return (
     <div className="flex flex-col justify-center items-start max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
       {blogs ? (

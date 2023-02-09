@@ -13,8 +13,9 @@ const getPostMetadata = async () => {
   const newBlogs = blogs.map((blogs: any) => {
     return {
       title: blogs.title,
-      date: blogs.created,
+      created: blogs.created,
       id: blogs.id,
+      tags: blogs.tags,
     };
   });
 
