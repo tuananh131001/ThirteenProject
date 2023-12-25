@@ -1,4 +1,24 @@
-# William-portfolio
-<img width="1119" alt="image" src="https://user-images.githubusercontent.com/67695658/214805156-0b34c9a9-2a32-4b6e-8361-4f7601cdb8eb.png">
+# README
 
-Next function will be blog, chat.
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
