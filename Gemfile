@@ -31,6 +31,8 @@ gem "redis", ">= 4.0.1"
 
 gem "tailwindcss-rails", "~> 2.1"
 
+gem "view_component"
+
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 

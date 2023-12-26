@@ -1,8 +1,8 @@
-class FooterComponent
-  def render_in(view_context)
-    <<~CONTENT
-      <div class="border bg-yellow-100">
-      </div>
-    CONTENT
+# frozen_string_literal: true
+
+class FooterComponent < ViewComponent::Base
+  def initialize(title:)
+    @title = title
   end
+
 end
