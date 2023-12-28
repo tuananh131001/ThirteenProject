@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class FooterComponent < ViewComponent::Base
+class ExampleComponent < ViewComponent::Base
   def initialize(title:)
     @title = title
   end
