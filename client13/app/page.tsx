@@ -30,6 +30,9 @@ export default function Home() {
               <span className="font-semibold">RMIT </span>
               Software Engineering (Honours) student{" "}
             </h2>
+            <h2 className="text-red-700 dark:text-red-200 mb-4">
+              Tui iuuuuu Thảo Vy 16/08/2005 nhứt trên đờiiiiiii 🧡
+            </h2>
             <p className="text-gray-600 dark:text-gray-400 mb-16">
               A highly motivated and results-driven Software Engineering student
               from RMIT University with a solid understanding of various
