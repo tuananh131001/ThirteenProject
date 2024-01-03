@@ -1,23 +1,24 @@
-<>
-      <div className="flex flex-col justify-center items-start max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
-        <section className="flex flex-col-reverse sm:flex-row items-start">
-          <div className="flex flex-col pr-8">
-            <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-1 text-black dark:text-white">
-              Tuan Anh Nguyen
-            </h1>
-            <h2 className="text-gray-700 dark:text-gray-200 mb-4">
-              <span className="font-semibold">RMIT </span>
-              Software Engineering (Honours) student{" "}
-            </h2>
-            <p className="text-gray-600 dark:text-gray-400 mb-16">
-              A highly motivated and results-driven Software Engineering student
-              from RMIT University with a solid understanding of various
-              programming languages.
-            </p>
-          </div>
-          <div className="w-[0px] sm:w-[176px] relative mb-8 sm:mb-0 mr-auto">
-            <div className="flex flex-col gap-3">
-              <%# <Image
+<div>
+  <%= render(AsideComponent.new) %>
+  <div className="flex flex-col justify-center items-start max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
+    <section className="flex flex-col-reverse sm:flex-row items-start">
+      <div className="flex flex-col pr-8">
+        <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-1 text-black dark:text-white">
+          Tuan Anh Nguyen
+        </h1>
+        <h2 className="text-gray-700 dark:text-gray-200 mb-4">
+          <span className="font-semibold">RMIT </span>
+          Software Engineering (Honours) student{" "}
+        </h2>
+        <p className="text-gray-600 dark:text-gray-400 mb-16">
+          A highly motivated and results-driven Software Engineering student
+          from RMIT University with a solid understanding of various
+          programming languages.
+        </p>
+      </div>
+      <div className="w-[0px] sm:w-[176px] relative mb-8 sm:mb-0 mr-auto">
+        <div className="flex flex-col gap-3">
+          <%# <Image
                 alt="Tuan Anh Nguyen"
                 height={176}
                 width={176}
@@ -26,11 +27,11 @@
                 priority
                 className="rounded-full filter"
               /> %>
-              <%= render(SocialBarComponent.new) %>
-            </div>
-          </div>
-        </section>
-        <%= render(ProjectsSectionComponent.new) %>
-        <%= render(TechnologySectionComponent.new) %>
+          <%= render(SocialBarComponent.new) %>
+        </div>
       </div>
-    </>
+    </section>
+    <%= render(ProjectsSectionComponent.new) %>
+    <%= render(TechnologySectionComponent.new) %>
+  </div>
+</>
