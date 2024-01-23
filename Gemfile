@@ -70,6 +70,6 @@ group :test do
   gem "selenium-webdriver"
 end
 
-gem "tailwindcss-rails", "~> 2.1"
+gem "tailwindcss-rails", "~> 2.2.1"
 
 gem "factory_bot", "~> 6.4"

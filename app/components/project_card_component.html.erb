@@ -1,0 +1,19 @@
+ <%= link_to @url, class: "bg-gradient-to-r #{@gradient} transform hover:scale-[1.01] p-1 transition-all flex gap-4 mb-8 md:my-12 rounded-xl w-full " do %>
+  <div class="w-full flex flex-col justify-between h-full bg-white dark:bg-gray-900 rounded-lg p-4">
+    <div class="w-full flex flex-col md:flex-row justify-between h-full">
+      <div class="w-full flex flex-col gap-2 h-auto justify-between">
+        <div class="w-full items-center">
+          <%= image_tag @thumbnail, class: "w-full h-full" %>
+        </div>
+        <div class="">
+          <h4 class="text-lg md:text-lg font-medium w-full text-gray-900 dark:text-gray-100 tracking-tight">
+            <%= @title %>
+          </h4>
+          <h4 class="text-md md:text-lg font-medium w-full text-red-500 dark:text-yellow-300 tracking-tight">
+            <%= @role %> - <%= @team_size %>
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
