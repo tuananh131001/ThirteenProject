@@ -1,6 +1,7 @@
 services:
   - type: web
-    name: mysite
+    name: thirteenProject
+    region: singapore
     runtime: ruby
     plan: free
     buildCommand: "./bin/render-build.sh"
