@@ -51,6 +51,7 @@ group :development, :test do
   gem "rspec-rails", "~> 6.1.0"
   gem "debug", platforms: %i[mri windows]
   gem "standard-rails"
+  gem "standard"
 end
 
 group :development do

@@ -28,6 +28,9 @@ class BlogsController < ApplicationController
   end
 
   def delete
+    @blog = Blog.find(params[:id])
+    @blog.destroy
+    redirect_to root_path, status: :see_other
   end
 
   private
