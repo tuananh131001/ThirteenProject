@@ -42,7 +42,7 @@ class ProjectsSectionComponent < ViewComponent::Base
     )) %>
 
     <%= render(ProjectCardComponent.new(
-    thumbnail: "https://www.iamwilliam.tech/_next/image?url=https%3A%2F%2Fcamo.githubusercontent.com%2F6aec86431ea3b948f01079af170c7f34a6269e184717c64e006b0904aebb78bd%2F68747470733a2f2f692e696d6775722e636f6d2f4a32356c6c39412e706e67&w=3840&q=75",
+    thumbnail: "https://camo.githubusercontent.com/71aaf56864ae8b5efede3da736cc8163605e61eff7f5952a31e88b61d3843447/68747470733a2f2f692e696d6775722e636f6d2f4a32356c6c39412e706e67",
     role: "Team Leader",
     url: "https://github.com/tuananh131001/Ambrosia",
     team_size: "4 people",
