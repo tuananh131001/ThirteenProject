@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
-class Front::ProjectsSectionComponent < ViewComponent::Base
+module Front
+  class ProjectsSectionComponent < ViewComponent::Base
   erb_template <<~ERB
       <section>
       <h3 class="font-bold text-2xl md:text-4xl tracking-tight mb-6 text-black dark:text-white">
@@ -73,4 +74,5 @@ class Front::ProjectsSectionComponent < ViewComponent::Base
       </a>
     </section>
   ERB
+  end
 end
