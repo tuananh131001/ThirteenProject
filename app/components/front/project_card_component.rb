@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class ProjectCardComponent < ViewComponent::Base
+class Front::ProjectCardComponent < ViewComponent::Base
   def initialize(thumbnail:, role:, url:, team_size:, title:, slug:, gradient:)
     super
     @thumbnail = thumbnail
