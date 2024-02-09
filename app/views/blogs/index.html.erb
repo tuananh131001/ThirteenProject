@@ -3,7 +3,7 @@
   <br/>
   <div class="gap-4 join join-vertical lg:join-horizontal">
     <% @blogs.each do |blog| %>
-        <%= render(Blogs::ArticleComponent.new(title: blog.title)) %>
+        <%= render(Blogs::ArticleComponent.new(article: blog))%>
    <% end %> 
   </div>
   <%= link_to "New Blog", new_blog_path %>

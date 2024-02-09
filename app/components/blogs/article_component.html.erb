@@ -6,10 +6,10 @@
     />
   </figure>
   <div class="card-body">
-    <h2 class="card-title"><%= @title %></h2>
+    <h2 class="card-title"><%= @article.title %></h2>
     <p>Click the button to listen on Spotiwhy app.</p>
     <div class="card-actions justify-end">
-      <button class="btn btn-primary">Listen</button>
+      <button class="btn btn-primary"><%= link_to "View", @article %></button>
     </div>
   </div>
 </div>
