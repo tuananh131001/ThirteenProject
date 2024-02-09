@@ -1,12 +1,10 @@
 <section class="flex flex-col">
-  <h1>Blogs</h1>
+  <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Blogs</h1>
   <br/>
-  <ul>
+  <div class="join join-vertical lg:join-horizontal">
     <% @blogs.each do |blog| %>
-      <li>
-        <%= link_to blog.title, blog %>
-      </li>
-    <% end %>
-  </ul>
+        <%= render(Blogs::ArticleComponent.new(title: blog.title)) %>
+   <% end %> 
+  </div>
   <%= link_to "New Blog", new_blog_path %>
 </section>
