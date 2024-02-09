@@ -212,6 +212,7 @@ GEM
     rake (13.1.0)
     rdoc (6.6.2)
       psych (>= 4.0.0)
+    redcarpet (3.6.0)
     redis (5.0.8)
       redis-client (>= 0.17.0)
     redis-client (0.19.1)
@@ -354,6 +355,7 @@ DEPENDENCIES
   jbuilder
   puma (>= 5.0)
   rails (~> 7.1.2)
+  redcarpet
   redis (>= 4.0.1)
   rspec-rails (~> 6.1.0)
   selenium-webdriver

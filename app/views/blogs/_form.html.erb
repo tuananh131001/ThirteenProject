@@ -1,4 +1,4 @@
-<%= form_with model: blog do |form| %>
+<%= form_with model: blog, class: "w-full" do |form|%>
   <div>
     <%= form.label :title %><br>
     <%= form.text_field :title, class: "input input-bordered w-full max-w-xs" %>

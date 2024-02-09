@@ -4,10 +4,10 @@
   <p><%= @blog.content %></p>
 
   <ul>
-    <li><%= link_to "Update", edit_blog_path(@blog) %></li>
+    <li><%= link_to "Edit", edit_blog_path(@blog), class: 'btn btn-secondary' %></li>
     <li><%= link_to "Destroy", blog_path(@blog), data: {
                       turbo_method: :delete,
                       turbo_confirm: "Are you sure?"
-                    } %></li>
+                    }, class: 'btn btn-warning' %></li>
   </ul>
 </div>

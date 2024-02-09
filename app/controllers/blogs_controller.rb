@@ -21,6 +21,10 @@ class BlogsController < ApplicationController
     @blog = Blog.new
   end
 
+  def edit
+    @blog = Blog.find(params[:id])
+  end
+
   def update
     @blog = Blog.find(params[:id])
 
@@ -31,10 +35,10 @@ class BlogsController < ApplicationController
     end
   end
 
-  def delete
+  def destroy
     @blog = Blog.find(params[:id])
     @blog.destroy
-    redirect_to root_path, status: :see_other
+    redirect_to blogs_path, status: :see_other
   end
 
   private
