@@ -1,8 +1,12 @@
 class BlogsController < ApplicationController
   def create
     @blog = Blog.new(blog_params)
-    @blog.save
-    redirect_to @blog
+    if @blog.save
+      flash[:notice] = "Blog is successfully created"
+      redirect_to @blog
+    else
+      format.html { render :new, status: :unprocessable_entity }
+    end
   end
 
   def index
