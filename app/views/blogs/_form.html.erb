@@ -9,7 +9,7 @@
 
   <div>
     <%= form.label :content %><br>
-    <%= form.text_area :content,class: "textarea textarea-bordered" %><br>
+    <%= form.text_area :content,class: "textarea textarea-bordered w-full", rows: 8, placeholder: 'User Markdown' %><br>
     <% blog.errors.full_messages_for(:content).each do |message| %>
       <div><%= message %></div>
     <% end %>
