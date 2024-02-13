@@ -1,6 +1,9 @@
+# frozen_string_literal: true
 
-class Blogs::ArticleComponent < ViewComponent::Base
-  def initialize(article:)
-    @article= article
+module Blogs
+  class ArticleComponent < ViewComponent::Base
+    def initialize(article:)
+      @article = article
+    end
   end
 end

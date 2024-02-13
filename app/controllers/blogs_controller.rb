@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 class BlogsController < ApplicationController
   def create
     @blog = Blog.new(blog_params)
     if @blog.save
-      flash[:notice] = "Blog is successfully created"
+      flash[:notice] = 'Blog is successfully created'
       redirect_to @blog
     else
       format.html { render :new, status: :unprocessable_entity }

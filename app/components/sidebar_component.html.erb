@@ -1,7 +1,7 @@
 <aside class="md:w-[150px] md:flex-shrink-0 -mx-4 md:mx-0 md:px-0">
   <div class="lg:sticky lg:top-20">
     <div
-      class="ml-2 md:ml-[12px] mb-2 px-4 md:px-0 md:mb-8 space-y-10 flex flex-col md:flex-row items-start"
+  class="ml-2 md:ml-[12px] mb-2 px-4 md:px-0 md:mb-8 space-y-10 flex flex-col md:flex-row items-start"
     >
       <a aria-label="Nguyen Tuan Anh" href="/">
         <div style="transform: none">
@@ -18,18 +18,17 @@
       id="nav"
     >
       <div class="flex flex-row md:flex-col space-x-0 pr-10 mb-2 mt-2 md:mt-0">
-        <div class="hidden md:block">
+        <% if current_controller?('blogs') %>
           <div
-            class="absolute bg-neutral-100 dark:bg-neutral-800 h-[34px] rounded-md z-[-1]"
+            class="absolute bg-white h-[34px] rounded-md z-[-1]"
+            style="margin-top:2.2rem; opacity: 1; transform: none; width: 64px"
+          ></div>
+        <%else %>
+          <div
+            class="absolute bg-white h-[34px] rounded-md z-[-1]"
             style="opacity: 1; transform: none; width: 64px"
           ></div>
-        </div>
-        <div class="block md:hidden">
-          <div
-            class="absolute bg-neutral-100 dark:bg-neutral-800 h-[34px] rounded-md z-[-1]"
-            style="opacity: 1; transform: none; width: 64px"
-          ></div>
-        </div>
+        <%end %>
         <a
           class="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 py-[5px] px-[10px] hover:cursor-pointer font-bold"
           href="/"
